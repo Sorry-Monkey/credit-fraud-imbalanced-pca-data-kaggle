@@ -1,4 +1,4 @@
-数据集：https://www.kaggle.com/code/janiobachmann/credit-fraud-dealing-with-imbalanced-datasets/input
+数据集：https://www.kaggle.com/code/janiobachmann/credit-fraud-dealing-with-imbalanced-datasets/input  
 已完成：  
 1、数据本身不用清洗  
 2、训练基础树模型    
