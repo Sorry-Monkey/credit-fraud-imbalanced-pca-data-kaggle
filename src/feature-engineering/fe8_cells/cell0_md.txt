@@ -1,0 +1,29 @@
+# FE-8：两阶段特征筛选（先 FE8，再 IF×EDA×A）
+
+参照协议：FE-6 purged walk-forward CV（2h embargo）。
+
+## 阶段 1：纯 FE8 筛选（在 BASE 上）
+
+- 对比基线：`0_BASE`（V1–V28 + Amount + Time）
+- 测试 **FE8 的 1..5 列子集**（共 31 组 + 基线 = 32 组）
+- **不含 IF**（专门看 FE8 边际贡献）
+- 稳定性：**2 模型 × 2 seed（42, 2026）**，Δ vs BASE
+
+## 阶段 2：入选 FE8 × IF × EDA × A
+
+- **除 `0_BASE` 与 MT-4 参照外，每组必须含入选 FE8 之一**
+- 无单独 IF、无 IF×EDA（无 FE8）参照
+- **EDA 原子**（5 个，含 `is_micro_testing`；`bands` 成对）→ 32 种子集
+- **主网格**：shortlist × 32 EDA × `{+A1, +A_top2}`（**无「不加 A」**）
+- **定稿参照**：MT-4 = `IF + hours_since_start + log1p_amount + A_top2`
+- **稳定性**：2 模型 × 2 seed（42, 2026）
+
+## FE8 新特征（5 列）
+
+`v14_x_v10`, `v14_x_v4`, `v10_x_v4`, `abs_v14_minus_v10`, `v14_x_log1p_amount`
+
+## 输出
+
+`output/fe8/fe8_stage1_*`、`fe8_stage2_*`、定稿 JSON、图表。
+
+> 矩阵变更后请删除 `fe8_stage2_checkpoint.csv` 再跑。阶段1已硬编码 Top-3 FE8 shortlist。

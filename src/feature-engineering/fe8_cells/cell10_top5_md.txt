@@ -1,0 +1,7 @@
+## 阶段 3：Top-5 扩展 seeds 复验
+
+对阶段 2 **conservative_score** 排名前 5 的组合，用 **8 个 seeds**（7, 13, 42, 77, 123, 256, 2026, 3141）× 2 模型复验稳定性。
+
+- 含 `0_BASE`、`MT-4` 参照 + Top-5 主网格 → **112 轮 CV**
+- 结果：`fe8_top5_validation_result.json`、`fe8_top5_validation_dual_summary.csv`
+- 已跑完时设 `SKIP_TOP5_RUN = True`（cell 1）可只展示历史结果，不重跑

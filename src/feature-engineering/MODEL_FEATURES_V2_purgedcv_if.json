@@ -1,0 +1,15 @@
+{
+  "MODEL_FEATURES_V2": [
+    "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10",
+    "V11", "V12", "V13", "V14", "V15", "V16", "V17", "V18", "V19", "V20",
+    "V21", "V22", "V23", "V24", "V25", "V26", "V27", "V28",
+    "Amount", "Time",
+    "is_amount_1_30", "is_amount_75_110", "if_oof_score", "one_euro_V14", "one_euro_V4"
+  ],
+  "winner_combo": "Ed_bands+IF+A_top2. 金额带 + IF + Family A Top-2",
+  "selected_extra": [
+    "is_amount_1_30", "is_amount_75_110", "if_oof_score", "one_euro_V14", "one_euro_V4"
+  ],
+  "cv_method": "purgedcv.WalkForwardSplit",
+  "note": "Recreated from FE-6 export for FE-8 consumption"
+}

@@ -1,0 +1,88 @@
+{
+  "MODEL_FEATURES_V3": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "Amount",
+    "Time",
+    "if_oof_score",
+    "log1p_amount",
+    "abs_v14_minus_v10",
+    "v14_x_log1p_amount",
+    "v14_x_v10",
+    "one_euro_V4"
+  ],
+  "winner_combo": "IF+Ed[log1p]+FE8[abs_v14_minus_v10+v14_x_log1p_amount+v14_x_v10]+A1",
+  "decision": "优胜: IF+Ed[log1p]+FE8[abs_v14_minus_v10+v14_x_log1p_amount+v14_x_v10]+A1 | Δ vs BASE=0.00614 | conservative=0.00492",
+  "selected_extra": [
+    "if_oof_score",
+    "log1p_amount",
+    "abs_v14_minus_v10",
+    "v14_x_log1p_amount",
+    "v14_x_v10",
+    "one_euro_V4"
+  ],
+  "stage1_shortlist": [
+    [
+      "abs_v14_minus_v10",
+      "v14_x_log1p_amount",
+      "v14_x_v10"
+    ],
+    [
+      "abs_v14_minus_v10",
+      "v10_x_v4",
+      "v14_x_log1p_amount",
+      "v14_x_v10"
+    ],
+    [
+      "abs_v14_minus_v10",
+      "v10_x_v4",
+      "v14_x_log1p_amount"
+    ]
+  ],
+  "stage1_n_combos": 32,
+  "stage2_n_combos": 194,
+  "mt4_reference_extra": [
+    "if_oof_score",
+    "hours_since_start",
+    "log1p_amount",
+    "one_euro_V14",
+    "one_euro_V4"
+  ],
+  "mt4_reference_label": "MT4_IF+hours+log1p+A_top2",
+  "mt4_delta_vs_base": 0.002389551923815264,
+  "fe8_new_features": [
+    "v14_x_v10",
+    "v14_x_v4",
+    "v10_x_v4",
+    "abs_v14_minus_v10",
+    "v14_x_log1p_amount"
+  ],
+  "baseline_label": "0_BASE",
+  "stage2_dual_summary_csv": "/Users/jingyuhe/Desktop/credit-fraud-dealing-with-imbalanced-datasets/src/feature-engineering/output/fe8/fe8_stage2_dual_summary.csv"
+}

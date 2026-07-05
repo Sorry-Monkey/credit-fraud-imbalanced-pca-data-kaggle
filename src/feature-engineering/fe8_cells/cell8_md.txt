@@ -1,0 +1,20 @@
+## 如何解读
+
+### 阶段 1（32 组）
+- 纯 `BASE + FE8` 子集（已硬编码 Top-3 shortlist，可跳过跑批）
+- 结果：`fe8_stage1_dual_summary.csv`、`fe8_stage1_shortlist.json`
+
+### 阶段 2（194 组）
+- **主网格**：`IF × EDA(32) × 入选FE8 × {+A1, +A_top2}` = 192 组
+- **参照**：`0_BASE` + MT-4（共 2 组）
+- **seeds**：42、2026（×2 模型 → **776 轮**）
+- 除 `0_BASE` 外均含 IF + 入选 FE8；Δ 均相对 BASE
+
+### 阶段 3（Top-5 × 8 seeds）
+- 对阶段 2 前 5 名做扩展 seed 复验（**112 轮**）
+- 看 `fe8_top5_validation_result.json` 中 `rerun_winner_label` 是否与 `stage2_rank1_label` 一致
+- 若扩展 seeds 下原第 1 明显回落，定稿应更保守
+
+### checkpoint
+矩阵变更后删除 `fe8_stage2_checkpoint.csv` 再跑 cell 7–8。
+Top-5 重跑前删除 `fe8_top5_validation_checkpoint.csv`。
